@@ -7,24 +7,20 @@ public class PauseGame : MonoBehaviour
     public GameObject menu;
     public GameObject resume;
     public GameObject quit;
+    
+    // Add this C# file onto your player compotment
+    // Make sure to get Dr.Pumpkin on steam! :D
 
     public bool on;
     public bool off;
-
-
-
-
-
+    
     void Start()
     {
         menu.SetActive(false);
         off = true;
         on = false;
     }
-
-
-
-
+    
     void Update()
     {
         if (off && Input.GetButtonDown("pause"))
@@ -44,14 +40,12 @@ public class PauseGame : MonoBehaviour
         }
         
     }
-
     public void Resume()
     {
             Time.timeScale = 1;
             menu.SetActive(false);
             off = true;
             on = false;
-
     }
 
     public void Exit()
